@@ -22,11 +22,11 @@ a) Apache2:
 
 b) MySQL:
 
->> sudo apt-get install mysql-server
+- sudo apt-get install mysql-server
 - to activate MySQL
->> sudo mysql_install_db
+- sudo mysql_install_db
 - to run MySQL setup script:
->> sudo /user/bin/mysql_secure_installation
+- sudo /user/bin/mysql_secure_installation
 
 
 c) PHP5:
