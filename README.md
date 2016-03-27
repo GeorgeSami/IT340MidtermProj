@@ -16,12 +16,12 @@ Content Delivery Network Deliverables
 
 1- Installing  
 a) Apache2:
-
+-
 >> sudo apt-get install apache2
 
 
 b) MySQL:
-
+-
 - sudo apt-get install mysql-server
 - to activate MySQL
 - sudo mysql_install_db
@@ -30,10 +30,11 @@ b) MySQL:
 
 
 c) PHP5:
-
+-
 >> sudo apt-get install php5 libapache2-mod-php5
-- to use MySQL with PHP5
-- 
+
+to use MySQL with PHP5
+
 >> sudo apt-get install php5-mysql
 
 
