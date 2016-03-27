@@ -33,6 +33,7 @@ c) PHP5:
 
 >> sudo apt-get install php5 libapache2-mod-php5
 - to use MySQL with PHP5
+- 
 >> sudo apt-get install php5-mysql
 
 
