@@ -15,6 +15,7 @@ Content Delivery Network Deliverables
 ==========================================================
 
 1- Installing  
+-
 a) Apache2:
 -
 >> sudo apt-get install apache2
@@ -22,11 +23,15 @@ a) Apache2:
 
 b) MySQL:
 -
-- sudo apt-get install mysql-server
-- to activate MySQL
-- sudo mysql_install_db
-- to run MySQL setup script:
-- sudo /user/bin/mysql_secure_installation
+>> sudo apt-get install mysql-server
+
+to activate MySQL
+
+>> sudo mysql_install_db
+
+to run MySQL setup script:
+
+>> sudo /user/bin/mysql_secure_installation
 
 
 c) PHP5:
@@ -39,7 +44,7 @@ to use MySQL with PHP5
 
 
 d) FTP: 
-
+-
 >> sudo apt-get install vsftpd
 
 
