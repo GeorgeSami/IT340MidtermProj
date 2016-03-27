@@ -1,0 +1,25 @@
+# /etc/nagios3/conf.d/george.cfg
+
+# Define Host
+define host{
+        use                     generic-host
+        host_name               george-VirtualBox
+        alias                   george
+        address                 10.0.2.15
+}
+
+# check DNS service.
+define service {
+        use                     generic-service
+        host_name               george-VirtualBox
+        service_description     DNS
+        check_command           check_dns!10.0.2.15
+}
+
+# NPRE Disk Check:
+define service {
+        use                     generic-service
+        host_name               george-VirtualBox
+        service_description     nrpe-disk
+        check_command           check_nrpe_1arg!check_all_disks!10.0.2.15
+}

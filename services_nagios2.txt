@@ -1,0 +1,86 @@
+# /etc/nagios3/conf.d/services_nagios2.cfg
+
+# check that apache2 services are running 
+define service { 
+        use				        generic-service 
+        host_name			    * 
+        service_description		Check Apache Web Server 
+        check_command			check_http 
+} 
+
+#check CPU Usage 
+define service{ 
+        use                     generic-service 
+        host_name               localhost 
+        service_description     CPU 1 Minute Average 
+        check_command           snmp_1minute_load!-C public 
+} 
+  
+define service{ 
+        use                     generic-service 
+        host_name               localhost 
+        service_description     CPU 5 Minute Average 
+        check_command           snmp_5minute_load!-C public 
+} 
+   
+define service{ 
+        use                     generic-service 
+        host_name               localhost 
+        service_description     CPU 15 Minute Average 
+        check_command           snmp_15minute_load!-C public 
+} 
+
+#check Memory Usage
+define service{ 
+         use                     generic-service 
+         host_name               localhost 
+         service_description     Swap Size 
+         check_command           snmp_SwapSize!-C public 
+ } 
+   
+ define service{ 
+         use                     generic-service 
+         host_name               localhost 
+         service_description     Swap Free 
+         check_command           snmp_SwapFree!-C public 
+ } 
+   
+ define service{ 
+         use                     generic-service 
+         host_name               localhost 
+         service_description     RAM Size 
+         check_command           snmp_RamSize!-C public 
+} 
+  
+define service{ 
+        use                     generic-service 
+        host_name               localhost 
+        service_description     RAM Free 
+        check_command           snmp_RamFree!-C public 
+} 
+
+
+# check local disk usage 
+define service { 
+        host_name			localhost 
+        service_description		Disk Usage 
+        check_command			check_local_disk!20%!10%!/ 
+        max_check_attempts		5 
+        check_interval			3 
+        retry_interval			1 
+        check_period			24x7 
+        notification_interval		30 
+} 
+ 
+ 
+#check System Uptime 
+define service { 
+        host_name			localhost 
+        service_description		Service Uptime 
+        check_command			check_snmp_uptime 
+        max_check_attempts              5 
+        check_interval                  3 
+        retry_interval                  1 
+        check_period                    24x7 
+        notification_interval           30 
+} 
