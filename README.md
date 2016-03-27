@@ -51,18 +51,29 @@ d) FTP:
 ====
 
 2- Configure a user to work with FRP with a file quota:
-
+-
 >> sudo apt-get install quota
+
 >> sudo nano /etc/fstab
+
 - added the following line to fstab:
+
 >> /dev/sda1 / ext4 defaults,usrquota 1 1
+
 - remount
+
 >> mount -vo remount /
+
 - to enable quota:
+
 >> quotaon -av
+
 - edited quota for user (george) using the following line:
+
 >> edquota george
+
 set soft limit to 90000 and hard limit to 100000
+
 >>quotacheck -vgum
 
 
@@ -71,7 +82,10 @@ set soft limit to 90000 and hard limit to 100000
 3- Configure Nagios to Monitor the user's disk usage:
 
 >> sudo apt-get install nagios3 nagios-nrpe-plugin
-please see: /etc/nagios3/conf.d/george.cfg
+
+please see: 
+
+/etc/nagios3/conf.d/george.cfg
 
 =======
 
