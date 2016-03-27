@@ -14,9 +14,7 @@ Content Delivery Network Deliverables
 
 ==========================================================
 
-1- Installing  
--
-a) Apache2:
+1- Installing  a) Apache2:
 -
 >> sudo apt-get install apache2
 
@@ -80,7 +78,7 @@ set soft limit to 90000 and hard limit to 100000
 ========
 
 3- Configure Nagios to Monitor the user's disk usage:
-
+-
 >> sudo apt-get install nagios3 nagios-nrpe-plugin
 
 please see: 
@@ -90,5 +88,7 @@ please see:
 =======
 
 4- Configure Nagios to Monitor Apache2 availability:
+-
+Please see: 
 
-Please see: /etc/nagios3/conf.d/services_nagios2.txt
+/etc/nagios3/conf.d/services_nagios2.txt
