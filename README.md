@@ -87,7 +87,7 @@ please see:
 
 =======
 
-4- Configure Nagios to Monitor Apache2 availability:
+4- Configure Nagios to Monitor Apache2 availability & General Requirments:
 -
 Please see: 
 
