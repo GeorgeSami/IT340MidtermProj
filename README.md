@@ -83,7 +83,7 @@ set soft limit to 90000 and hard limit to 100000
 
 please see: 
 
-/etc/nagios3/conf.d/george.cfg
+/etc/nagios3/conf.d/george.txt
 
 =======
 
